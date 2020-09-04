@@ -28,6 +28,7 @@ public class DemoController {
 	
 	@GetMapping(path = "/{demoId}")
 	public ResponseEntity<DemoEntity> getDemo(@PathVariable(name = "demoId") Integer id) {
+		System.out.print("cambio");
 		ResponseEntity<DemoEntity> response = null;
 		
 		Optional<DemoEntity> demoEntity = demoRepository.findById(id);
